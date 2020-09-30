@@ -2,10 +2,47 @@ $colors:(
     primary:#45a29e,
     primary-light:#66fcf1
 );
-
+$primary:20px;
 @function color($color-name){
 @return map-get($colors, $color-name);
 }
+html,
 body{
-    background-color: color(primary-light);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    //px are no bueno, rem are relative units, 1 rem=10 px, vh or viewpoint height, vw or viewpoint width
+}
+body{
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(color(primary),0.5),
+        rgba(color(primary-light),0.5),
+    ),
+        url("img/headphones-bg.jpg");
+    
+    background-size:cover;
+    height:95vh;
+    position: relative;
+}
+.header-text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 5rem;
+}
+.header-primary{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.header-primary-main{
+    //display: block; this is one method for sepration
+}
+.header-primary-sub{
+    //display: block; this is one method for sepration
+    font-size: 4rem;
 }
