@@ -1,30 +1,26 @@
-$colors:(
-    primary:#45a29e,
-    primary-light:#66fcf1
-);
-$primary:20px;
-@function color($color-name){
-@return map-get($colors, $color-name);
-}
+@import "_variable.scss"
+
 html,
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: black;
     //px are no bueno, rem are relative units, 1 rem=10 px, vh or viewpoint height, vw or viewpoint width
 }
-body{
+.header{
     background-image: linear-gradient(
         to right bottom,
         rgba(color(primary),0.5),
         rgba(color(primary-light),0.5),
     ),
-        url("img/ headphones-bg.jpg");
-    
+    url("img/headphones-bg.jpg");
     background-size:cover;
-    height:95vh;
+    height:100vh;
     position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 .header-text-box{
     position: absolute;
@@ -33,17 +29,19 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 5rem;
-    text-transform: uppercase;
 }
 .header-primary{
 width:100vw
     display: flex;
 flex-direction: column;
 align-items: center;
-color: white;
+color: #fff;
+text-transform: uppercase;
 }
 .header-primary-main{
     //display: block; this is one method for sepration
+letter-spacing: 1rem;
+text-shadow: palevioletred 5px 5px;
 }
 .header-primary-sub{
     //display: block; this is one method for sepration
