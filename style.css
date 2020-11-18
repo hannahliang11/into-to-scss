@@ -5,13 +5,18 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
 }
 
-body {
+.header {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(69, 162, 158, 0.5)), to(rgba(102, 252, 241, 0.5))), url("img/headphones-bg.jpg");
   background-image: linear-gradient(to right bottom, rgba(69, 162, 158, 0.5), rgba(102, 252, 241, 0.5)), url("img/headphones-bg.jpg");
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 
 .header-text-box {
@@ -25,6 +30,7 @@ body {
 }
 
 .header-primary {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +41,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header-primary-main {
+  letter-spacing: 1rem;
+  text-shadow: palevioletred 5px 5px;
 }
 
 .header-primary-sub {
